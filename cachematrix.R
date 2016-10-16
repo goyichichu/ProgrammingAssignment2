@@ -32,7 +32,7 @@ cacheSolve <- function(x, ...) {
    if (is.null(inv_x)) {
       message("calculating inverse and caching")
       data <- x$get()
-      inv_x <- solve(data)
+      inv_x <- solve(data, ...)
       x$setinv(inv_x)
    }
 
